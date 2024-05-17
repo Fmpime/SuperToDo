@@ -1,0 +1,292 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html{
+    display: block;
+    height: 100vh;
+    background:  url("../icons/1614722764_224-p-foni-dlya-yezhednevnika-241-1536x1024.jpg") no-repeat fixed center;
+    background-size: cover;
+}
+body{
+    display: block;
+    color: #ff2f00;
+    height: 100%;
+    width: 100%;
+    font-size: 20px;
+}
+
+.layout{
+    display: grid;
+    grid-template-rows: 6rem  1fr;
+    min-height: 100%;
+    min-width: 100%;
+    gap: 1rem;
+    background:rgba(0, 0, 0, 0.4);
+}
+.mainLayout{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    height: 100%;
+    gap: 1rem;
+}
+.headerProfile{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    gap: 0.5rem;
+}
+.header{
+
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns:auto 1fr auto;
+    align-items: center;
+    padding: 0 2rem;
+    background: rgba(44, 44, 44, 0.94);
+}
+.sidebar{
+    position: sticky;
+    top: 7rem;
+    height: 85vh;
+    display: grid;
+    background: rgba(37, 37, 37, 0.85);
+    align-items: center;
+    border-top-right-radius:2rem;
+    border-bottom-right-radius:2rem;
+
+}
+.statisticPage{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 0 2rem;
+    gap: 4rem;
+}
+.statisticPageItem{
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+    justify-content: center;
+    border: 0.2rem skyblue solid;
+    padding: 1rem;
+    transition: 0.3s;
+}
+.statisticPageItem:hover{
+    border: 0.2rem #f86b1f solid;
+    cursor: pointer;
+
+}
+.page{
+    display: grid;
+    grid-template-rows: 3rem 1fr;
+    width: 100%;
+    scrollbar: n;
+    gap: 1rem;
+}
+.heading{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+}
+.sidebarMenuItem{
+    align-items: center;
+    height: 100%;
+    transition: 0.2s;
+    border: rgba(248, 107, 31, 0) solid 0.1rem;
+}
+.sidebarMenuItem0{
+    border-top-right-radius:2rem ;
+}
+.sidebarMenuItem4{
+    border-bottom-right-radius:2rem;
+}
+.sidebarMenuItem:hover{
+    border: rgb(248, 107, 31) solid 0.1rem;
+    background: rgb(95, 103, 93)
+
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/*hover background: rgba(119, 119, 119, 0.85);*/
+.timeBlockItem{
+    overflow-block: scroll;
+    display: grid;
+    grid-template-columns:2rem auto 10rem 4rem 5rem 5rem;
+    height: 4rem;
+    align-items: center;
+}
+
+
+.ListModeBlock{
+    display: grid;
+    position: static;
+    grid-template-columns: 8rem 1fr;
+}
+.ListModeColumns{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    gap: 0.5rem;
+    color: #69ff48;
+}
+.ListModeTaskLine{
+    display: grid;
+    border: #c5ff31 0.2rem solid;
+    border-radius: 1rem;
+    height: 27rem;
+    width: 14rem;
+}
+.checkbox {
+    position: relative;
+    padding-left: 30px;
+    height: 1.5rem;
+    width: 1.5rem;
+    display: flex;
+    align-items: center;
+    color: #000;
+    cursor: pointer;
+}
+
+.authFormBlock{
+    display: grid;
+    align-items: center;
+    justify-content:center ;
+    height: 100%;
+}
+.authForm{
+    display: grid;
+    height: 20rem;
+    align-items: center;
+    width: 20rem;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.AuthField{
+    display: flex;
+    flex-direction: column;
+}
+.authBtn{
+    display: grid;
+    gap: 0.5rem;
+}
+
+
+
+@media (max-width: 1440px) {
+    .statisticPage{
+        gap: 2rem;
+        padding: 0 1rem;
+    }
+    .statisticPageItem{
+        padding: 1rem;
+    }
+    body{
+        font-size: 14px;
+
+    }
+}
+@media (max-width: 1024px) {
+    .statisticPage{
+        gap: 0.3rem;
+        padding: 0 1rem;
+    }
+    .statisticPageItem{
+        padding: 1rem 0.3rem;
+    }
+    body{
+        font-size: 14px;
+
+    }
+    .sidebarMenuItem:hover{
+        border: rgba(248, 107, 31, 0) solid 0.1rem;
+
+    }
+}
+@media (max-width: 768px) {
+    body{
+        font-size: 16px;
+    }
+    .sidebarMenuItem:hover{
+        border: rgba(248, 107, 31, 0) solid 0.1rem;
+
+    }
+    .mainLayout{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .sidebarMenuItem:hover{
+
+    }
+    .main{
+        height: 100%;
+        width: 100%;
+        place-self: start;
+    }
+    .statisticPage{
+        grid-template-columns: 1fr;
+        gap: 1rem;
+
+    }
+    .sidebar{
+        position: sticky;
+        bottom: 0;
+        display: grid;
+        height: 100px;
+        width: 100%;
+        background: rgba(37, 37, 37, 0.85);
+        padding: 1rem 2rem ;
+        align-items: center;
+        border-top-right-radius:2rem;
+        grid-template-columns:auto auto auto auto auto;
+    }
+
+}
+
+@media (max-width: 578px) {
+    body{
+        font-size: 14px;
+    }
+    .sidebarItemsName{
+        display: none;
+    }
+    .sidebar{
+        position: sticky;
+        bottom: 0;
+        display: grid;
+        height: 80px;
+        width: 100vw;
+        background: rgba(37, 37, 37, 0.85);
+        padding: 1rem 2rem ;
+        align-items: center;
+        border-top-right-radius:2rem;
+        grid-template-columns:auto auto auto auto auto;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.sideIcon{
+    justify-self: center;
+}
+.sidebarMenuItem{
+    display: flex;
+}
