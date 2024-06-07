@@ -25,7 +25,7 @@ export function useTimeBlockDebounce({watch, id, refetch}) {
     const {createTimeBlock} = UseCreateTimeBlock(refetch)
     const debouncedCreateTimBlock = useCallback(
         debounce((formData) => {
-            debugger
+
             createTimeBlock(formData)
         }, 1200), [])
     const debouncedUpdateTimBlock = useCallback(

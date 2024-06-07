@@ -175,9 +175,48 @@ input[type="number"]::-webkit-outer-spin-button {
     display: grid;
     gap: 0.5rem;
 }
+.pomodoro{
+    display: grid;
+    gap: 2rem;
+    place-items: center;
+}
+.pomodoro-round{
+    display: inline-block;
+    border: #ff2f00 0.2rem solid;
+    width: 4rem;
+    height: 1.5rem;
+    background: linear-gradient(to left, rgb(2, 0, 24) 45%, rgb(255, 47, 0) 50%)right;
+    background-size: 200%;
+    transition: 3500s;
+}
+.pomodoro-round-completed{
+    display: inline-block;
+    width: 4rem;
+    height: 1.5rem;
+    border: #ff2f00 0.2rem solid;
+    background: rgb(255, 47, 0) right;
 
+}
+.pomodoro-round-true{
+    background-position:left ;
 
-
+}
+.pomodoro-timer{
+    display: flex;
+    border: #ff2f00 0.2rem solid;
+    width: 9rem;
+    height: 9rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.round-list{
+    display: flex;
+    gap: 0.5rem;
+}
+.pomodoro-rounds{
+    display: flex;
+}
 @media (max-width: 1440px) {
     .statisticPage{
         gap: 2rem;
@@ -211,6 +250,10 @@ input[type="number"]::-webkit-outer-spin-button {
 @media (max-width: 768px) {
     body{
         font-size: 16px;
+    }
+    .round-list{
+        display: grid;
+        grid-template-columns:auto auto auto auto ;
     }
     .sidebarMenuItem:hover{
         border: rgba(248, 107, 31, 0) solid 0.1rem;
@@ -254,6 +297,10 @@ input[type="number"]::-webkit-outer-spin-button {
     }
     .sidebarItemsName{
         display: none;
+    }
+    .round-list{
+        display: grid;
+        grid-template-columns:auto auto auto ;
     }
     .sidebar{
         position: sticky;

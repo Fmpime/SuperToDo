@@ -1,6 +1,5 @@
 import {NextRequest, NextResponse} from "next/server";
 import {EnumTokens} from "@/services/auth-token.service";
-import {redirect} from "next/navigation";
 import {DASHBOARD_PAGES} from "@/config/pages-url.config";
 
 export async function middleware(

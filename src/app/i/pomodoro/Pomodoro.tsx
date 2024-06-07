@@ -25,9 +25,9 @@ isRunning,isBreakTime}=  useTimer()
         setSecondsLeft(workInterval * 60)
     },refetch)
     return (
-        <div>
+        <div className={"pomodoro"}>
             {!isLoading&&(
-                <div>{formatTime(secondsLeft)}</div>
+                <div className={"pomodoro-timer"}>{formatTime(secondsLeft)}</div>
             )}
             {isLoading?(
                 <Loader/>

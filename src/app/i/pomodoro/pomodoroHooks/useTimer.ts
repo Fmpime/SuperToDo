@@ -16,7 +16,7 @@ export const useTimer = ()=>{
         if (isRunning&&!activeRound?.isCompleted&&activeRound?.id){
             interval = setInterval(()=>{
                 setSecondsLeft(secondsLeft=>secondsLeft-1)
-            },10)
+            },1000)
         }else if (!isRunning&&secondsLeft!==0&&interval){
             clearInterval(interval)
         }

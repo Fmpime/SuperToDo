@@ -1,5 +1,6 @@
 import {IPomodoroRoundResponse} from "@/type/pomodoro.types";
 import {ChevronLeft, ChevronRight} from "lucide-react";
+import Round from "@/app/i/pomodoro/rounds/Round";
 
 
 interface PomodoroRoundsTypeProps {
@@ -11,24 +12,19 @@ interface PomodoroRoundsTypeProps {
 
 export function PomodoroRounds(
     {
-        rounds, nextRoundHandler, prevRoundHandler,
+        rounds, nextRoundHandler, prevRoundHandler,activeRound
     }: PomodoroRoundsTypeProps) {
     return(
-        <div>
+        <div className={'pomodoro-rounds'}>
             <button
 
                 onClick={()=>prevRoundHandler()}
             >
                 <ChevronLeft size={23}/>
             </button>
-            <div>
-                {rounds&&rounds.map((round,index)=>{
-                    return(
-                        <div key={index}>
-                            {round.isCompleted?'true':'false'}
-                        </div>
-                    )
-                })}
+            <div className={"round-list"}>
+                {rounds&&rounds.map((round,index)=>
+                    <Round round={round} activeRound={activeRound} key={index}></Round>)}
             </div>
             <button
                 onClick={()=>nextRoundHandler()}

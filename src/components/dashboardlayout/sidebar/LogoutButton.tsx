@@ -1,7 +1,6 @@
 import {useMutation} from "@tanstack/react-query";
 import {authService} from "@/services/auth.service";
 import {toast} from "sonner";
-import {DASHBOARD_PAGES} from "@/config/pages-url.config";
 import {useRouter} from "next/navigation";
 
 
